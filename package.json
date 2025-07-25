@@ -1,0 +1,16 @@
+{
+  "name": "stl-projector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "polygon-clipping": "^0.15.7",
+    "stl-parser": "^0.11.1",
+    "svg-builder": "^2.0.0"
+  }
+}
