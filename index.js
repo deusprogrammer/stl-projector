@@ -64,9 +64,14 @@ stream.on('end', () => {
     });
   });
 
-  const outputFile = path.basename(inputFile, path.extname(inputFile)) + '.svg';
+  const inputDir = path.dirname(inputFile);
+  const outputFile = path.join(
+    inputDir,
+    path.basename(inputFile, path.extname(inputFile)) + '.svg'
+  );
+
   const svg =
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">` +
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${width}mm" height="${height}mm" viewBox="0 0 ${width} ${height}">` +
     `<g>${groupContent}</g></svg>`;
 
   fs.writeFileSync(outputFile, svg);
